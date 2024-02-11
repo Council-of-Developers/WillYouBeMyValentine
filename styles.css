@@ -1,17 +1,100 @@
-/* Add styles for the btn class */
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4CAF50; /* Green background color */
-  color: white; /* White text color */
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px; /* Rounded corners */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Lobster&family=Montserrat:wght@400;700;800;900&display=swap');
+*{
+    margin:0px;
+    padding: 0px;
+}
+body{
+    background-color: #FFA4B1;
+    font-family: 'Lobster', sans-serif;
+    
+}
+.main-div{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-top: 15%;
+    padding-bottom: 15%;
+    border: 2px solid #023373;
+    width: 90%;
+    border-radius: 20px;
+    background-color: #FFDFBE;
+    text-align: center;
+}
+.main-div h1{
+    color: #023373;
+    padding-bottom: 1em;
+    font-size: 42px;
+    
+}
+.button-group{
+    display: flex;
+    gap: 2em;
+}
+.btn{
+    background-color: #FF6177;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    border: 3px solid #023373;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'Lobster', sans-serif;
+    color: #023373;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFDFBE;
+    border-top: 2px solid #023373;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+.footer_item{
+    margin-top: 0.2em;
 }
 
-/* Add styles for hover effect */
-.btn:hover {
-  background-color: #45a049; /* Darker green on hover */
+@media only screen and (max-width: 600px)  {
+    .main-div{
+        padding-top: 45%;
+        padding-bottom: 45%;
+    }
+    .button-group{
+        flex-direction: column;
+    }
+    .main-div h1{
+        color: #023373;
+        padding-bottom: 1em;
+        font-size: 24px;
+        
+    }
+    .button-group{
+        
+        gap: 1em;
+    }
+    .btn{
+        width: 80px;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+    }
+}
+
+.ChangeBtn {
+    position: absolute;
 }

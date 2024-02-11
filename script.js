@@ -10,6 +10,23 @@ function teleportNoBtn() {
   var typesOfNo = ["No", "Are you sure?", "Really Sure?", "Think Again!", "Last Chance!", "Surely Not?", "You might regret this...", "Give it another thought", "Are you absolutely certain?", "Have a heart", "Don't be so cold", "Change of Heart?", "Wouldn't you reconsider?", "Is that your final answer?", "You're breaking my heart!"]
   const randomNumber = Math.floor(Math.random() * 16);
   
+  const noBtn = document.getElementById("noBtn");
+  const mainDiv = document.querySelector(".main-div");
+
+  // Change the text of the button
+  noBtn.classList.add("ChangeBtn");
+
+  noBtn.textContent = typesOfNo[randomNumber];
+
+  // Move the button to a random position within the main-div
+  const maxX = mainDiv.clientWidth - noBtn.clientWidth;
+  const maxY = mainDiv.clientHeight - noBtn.clientHeight;
+
+  const randomX = Math.floor(Math.random() * maxX);
+  const randomY = Math.floor(Math.random() * maxY);
+
+  noBtn.style.left = randomX + "px";
+  noBtn.style.top = randomY + "px";
 }
 
 function generateShareLink() {

@@ -8,14 +8,16 @@
 </head>
 <body>
   <div class="main-div">
-    <h1>, will you be my Valentine?</h1>
-    <span class="btn yes">Yes</span>
-    <span class="btn no">No</span>
+    <h1 id="output">, will you be my Valentine?</h1>
+    <button class="btn" onclick="redirectToMazaAgayaBhai()">Yes</button>
+    <button class="btn" onclick="teleportNoBtn()" onmouseenter="teleportNoBtn()">No</button>
   </div>
-  <!-- Footer -->
   <div class="footer">
     Made with &#129505; By <a href="https://github.com/Council-of-Developers">Council of Developers</a>
   </div>
   <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", populateQuestion());
+  </script>
 </body>
 </html>

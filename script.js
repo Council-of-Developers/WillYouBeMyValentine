@@ -36,7 +36,7 @@ function generateShareLink() {
 
   navigator.clipboard.writeText(shareLink)
       .then(() => {
-          alert('Link copied to clipboard!')
+          alert('Link copied to clipboard! Now share with your crush...')
           window.location.href = "/?lover=" + encodeURIComponent(loverName);
       })
       .catch((err) => console.error('Unable to copy link to clipboard', err));

@@ -8,7 +8,7 @@ function redirectToShare() {
 
 function teleportNoBtn() {
   var typesOfNo = ["No", "Are you sure?", "Really Sure?", "Think Again!", "Last Chance!", "Surely Not?", "You might regret this...", "Give it another thought", "Are you absolutely certain?", "Have a heart", "Don't be so cold", "Change of Heart?", "Wouldn't you reconsider?", "Is that your final answer?", "You're breaking my heart!"]
-  const randomNumber = Math.floor(Math.random() * 16);
+  const randomNumber = Math.floor(Math.random() * 15);
   
   const noBtn = document.getElementById("noBtn");
   const mainDiv = document.querySelector(".main-div");

@@ -69,7 +69,26 @@ body{
 .footer_item{
     margin-top: 0.2em;
 }
-
+.btn_share{
+    background-color: #FF6177;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 1em;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    border: 3px solid #023373;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'Lobster', sans-serif;
+    color: #023373;
+}
+.main-input{
+    width: 290px;
+    height: 35px;
+    border: 2px solid #023373;
+}
 @media only screen and (max-width: 600px)  {
     .main-div{
         padding-top: 45%;
@@ -84,6 +103,11 @@ body{
         font-size: 24px;
         
     }
+    .main-input{
+        width: 200px;
+        height: 35px;
+        border: 2px solid #023373;
+    }
     .button-group{
         
         gap: 1em;
@@ -92,6 +116,10 @@ body{
         width: 80px;
         padding-top: 0.2em;
         padding-bottom: 0.2em;
+    }
+    .btn_share{
+        font-size: 18px;
+        width: 200px;
     }
 }
 

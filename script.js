@@ -32,12 +32,14 @@ function teleportNoBtn() {
 function generateShareLink() {
   const loverName = document.getElementById('loverName').value;
 
-  const shareLink = window.location.origin + '?lover=' + encodeURIComponent(loverName);
+  var base64EncodedText = btoa(loverName);
+
+  const shareLink = window.location.origin + '?lover=' + encodeURIComponent(base64EncodedText);
 
   navigator.clipboard.writeText(shareLink)
       .then(() => {
           alert('Link copied to clipboard! Now share with your crush...')
-          window.location.href = "/?lover=" + encodeURIComponent(loverName);
+          window.location.href = "/?lover=" + encodeURIComponent(base64EncodedText);
       })
       .catch((err) => console.error('Unable to copy link to clipboard', err));
 }
@@ -50,9 +52,11 @@ function populateQuestion() {
 
   const nameParam = getQueryParam('lover');
 
+  var decodedText = atob(nameParam);
+
   const outputElement = document.getElementById('output');
   if (nameParam) {
-      outputElement.textContent = `${nameParam}, will you be my Valentine?`;
+      outputElement.textContent = `${decodedText}, will you be my Valentine?`;
   } else {
       outputElement.textContent = 'Will you be my Valentine?';
   }
